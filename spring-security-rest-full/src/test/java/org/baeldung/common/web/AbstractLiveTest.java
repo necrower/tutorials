@@ -1,5 +1,7 @@
 package org.baeldung.common.web;
 
+import static org.baeldung.Consts.APPLICATION_PORT;
+
 import java.io.Serializable;
 
 import org.baeldung.test.IMarshaller;
@@ -55,7 +57,7 @@ public abstract class AbstractLiveTest<T extends Serializable> {
     //
 
     protected String getURL() {
-        return "http://localhost:8080/spring-security-rest-full/foos";
+        return "http://localhost:" + APPLICATION_PORT + "/foos";
     }
 
     protected final RequestSpecification givenAuth() {
